@@ -1,6 +1,8 @@
-<?php
-if (isset($_SESSION['username'])) {
-    session_destroy();
-}
-
+<?php 
+ 
+session_start();
+session_destroy();
+ 
 header("Location: index.php");
+ 
+?>
