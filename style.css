@@ -1,0 +1,48 @@
+.menu-body{
+	margin: auto;
+	width: 400px;
+	box-shadow: 0 0 10px;
+}
+.warna{
+    background-color:#008080;
+}
+.carousel{
+    box-shadow: 0 0 20px;
+}
+.card{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 10px;
+}
+
+input[type="text"],
+input[type="password"]{
+    width: 90%;
+    padding: 10px;
+    margin-top: 12px;
+    color: #888;
+    position: relative;
+    margin-left: 18px;
+}
+input[type="submit"]{
+    width: 90%;
+    padding: 20px;
+    margin: 15px 0;
+    color: #888;
+    background-color:#FFA500 ;
+    border:none;
+    color:#eee;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    margin-left: 18px;
+}
+input[type="submit"]:hover{
+    opacity: 0.8;
+    border-color: #00adb1;
+}
+
+.modal-body{
+display: flex;
+justify-content: space-around;
+}
