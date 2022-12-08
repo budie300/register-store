@@ -1,7 +1,8 @@
 <?php  
-include 'config2.php';
-error_reporting(0);
 session_start();
+
+include 'config2.php';
+// error_reporting(0);
 
 if (isset($_SESSION['username'])) {
     header("Location: berhasil_login.php");
@@ -54,9 +55,9 @@ if (isset($_POST['submit'])) {
           </a>
           <ul class="dropdown-menu menu-body">
             <li><a class="dropdown-item text-center" href="#">Login Here</a>
-               <form>
- 				        <input type="text" name="email" placeholder="email" value="<?php echo $email;?>" >
-                <input type="password" name="password" placeholder="password" value="<?php echo $_POST['password'];?>" >
+               <form method="post">
+ 				        <input type="text" name="email" placeholder="email" />
+                <input type="password" name="password" placeholder="password" />
                 <input type="submit" name="submit" value="Login">
             	</form>
             </li>

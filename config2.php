@@ -1,7 +1,7 @@
 <?php
 
 	// Database connection
-	$conn = new mysqli('localhost','root','','beestore');
+	$conn = new mysqli('test_db','laravel','laravel','register_store');
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
