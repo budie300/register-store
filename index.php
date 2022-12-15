@@ -10,13 +10,17 @@ if (isset($_SESSION['username'])) {
  
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $password =$_POST['password'];
+    $password = $_POST['password'];
+    $umur = $_POST['umur
+    '];
  
     $sql = "SELECT * FROM register WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
+        $_SESSION['umur'] = $row['umur'];
+        $_SESSION['gender'] = $row['gender'];
         header("Location: home.php");
     } else {
         echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";

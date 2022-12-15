@@ -1,6 +1,7 @@
 <?php 
- 
+
 session_start();
+include 'config2.php';
  
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
@@ -26,7 +27,19 @@ if (!isset($_SESSION['username'])) {
 
     <div class="container">
         <form action="" method="POST">
-            <?php echo "<h1>Selamat Datang, " . $_SESSION['username'] ."!". "</h1>"; ?>
+            <?php //echo "<h1>Selamat Datang, " . $_SESSION['username'] ."!". "</h1>"; 
+                  if ($_SESSION['umur'] <=15) {
+                    echo "<h1>hay selamat datang Anda Remaja bernama,". $_SESSION['username'] ."!". "</h1>";
+                  } elseif ($_SESSION['umur'] <=17) {
+                    echo "<h1>hay selamat datang Anda Remaja dewasa bernama,". $_SESSION['username'] ."!". "</h1>";
+                  } elseif ($_SESSION['umur'] <=45 and $_SESSION['gender'] == "l") {
+                    echo "<h1>hay selamat datang Anda PRIA di usia PRODUKTIF bernama,". $_SESSION['username'] ."!". "</h1>";
+                  } else{
+                    echo "<h1>hay selamat datang Anda wanita di usia PRODUKTIF bernama,". $_SESSION['username'] ."!". "</h1>";
+                  }
+                  
+
+            ?>
              
             <div>
             <a href="logout.php"><button type="button" class="btn btn-danger">Logout</button></a>

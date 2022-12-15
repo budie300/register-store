@@ -53,7 +53,19 @@
             <div class="mt-3">
                <input class="form-control form-control-sm" type="text" placeholder="Nama Anda" aria-label=".form-control-sm" name="nm_member" >
             </div>
+
+           <div class="mt-3">
+             <input type="radio" name="gender" value="p"> Perempuan
+             <input type="radio" name="gender" value="l"> Laki-Laki
+           </div>
+
+
             <div class="mt-3">
+               <input class="form-control form-control-sm" type="text" placeholder="Umur Anda" aria-label=".form-control-sm" name="umur" >
+            </div>
+
+
+            <div class="mt-4">
                <input class="form-control form-control-sm" type="text" placeholder="No Hp" aria-label=".form-control-sm" name="nohp" >
             </div>
             <div class="mt-3">
